@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:  linear-gradient( rgba(0,0,0,0),rgba(0,0,0,0.7));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+
+}
+
+.main-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 76vh;
+    /* background: #f1f2f3; */
+    flex-direction: column;
+}
+
+.main-outer .battery {
+    border: 5px solid;
+    width: 150px;
+    height: 80px;
+    position: relative;
+}
+
+.main-outer .battery::before {
+    content: "";
+    top: 50%;
+    right: 0;
+    transform: translate(20px, -50%);
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background: transparent;
+    border: 5px solid;
+
+}
+
+.main-outer .battery::after {
+    content: "";
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    width: 97%;
+    height: 90%;
+    background: tomato;
+    animation: animate 2s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100% {
+        width: 95%;
+    }
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    background: tomato;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all .5s ease;
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.hero a:hover {
+    background: transparent;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid tomato;
+    color: white;
+
+}
+
+.social-links {
+    text-align: center;
+    background-image:  linear-gradient( rgba(0,0,0,0),rgba(0,0,0,0.7));
+}
+
+.social-links ul {
+    list-style-type: none;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 20px 0;
+}
+
+.social-links ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all .5s ease;
+    font-size: 2rem;
+}
+
+.social-links ul li a:hover {
+    text-decoration: none;
+    color: tomato;
+}
